@@ -1,4 +1,4 @@
-local table.new = function(size--[[#: number]], records--[[#: number]])
+local function table.new(size-, records)
 	return {}
 end
 
