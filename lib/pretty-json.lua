@@ -1,3 +1,7 @@
+local table.new = function(size--[[#: number]], records--[[#: number]])
+	return {}
+end
+
 local Constant = {
     ESC_MAP = {
         ["\\"] = [[\]],
