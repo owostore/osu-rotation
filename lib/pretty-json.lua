@@ -1,7 +1,3 @@
-local function table.new(size, records)
-	return {}
-end
-
 local Constant = {
     ESC_MAP = {
         ["\\"] = [[\]],
@@ -256,7 +252,7 @@ function Parser:string(str, pos)
     pos = pos + 1
     
     local i = 1
-    local chars = table.new(#str - pos - 1, 0)
+    local chars = {} --table.new(#str - pos - 1, 0)
     while(pos <= #str) do
         local c = str:sub(pos, pos)
 
@@ -286,7 +282,7 @@ function Parser:string(str, pos)
 end
 
 function Parser:array(str, pos)
-    local arr = table.new(10, 0)
+    local arr = {} --table.new(10, 0)
     local val
     local i = 1
     local c
@@ -311,7 +307,7 @@ function Parser:array(str, pos)
 end
 
 function Parser:table(str, pos)
-    local obj = table.new(0, 10)
+    local obj = {} --table.new(0, 10)
     local key
     local val
     local c
