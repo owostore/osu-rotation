@@ -5,7 +5,7 @@
 ]]--
  
 -- file read
-function FileRead(filePath)
+function jsonFileRead(filePath)
     local data = nil
     local handle = io.open(filePath, "r")
  
@@ -18,7 +18,7 @@ function FileRead(filePath)
 end
  
 -- file write
-function FileWrite(filePath, data, pretty)    
+function jsonFileWrite(filePath, data, pretty)    
     local handle = io.open(filePath, "w+")
     
     if handle then
