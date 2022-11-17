@@ -1,4 +1,4 @@
-local function table.new(size-, records)
+local function table.new(size, records)
 	return {}
 end
 
